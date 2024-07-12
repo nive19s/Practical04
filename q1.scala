@@ -13,7 +13,7 @@ object P3{
       }
     }
     if (!found) {
-      println("Item is not found")
+      println("Item Does not exists")
     }
   }
 
@@ -22,7 +22,7 @@ object P3{
     for (i <- Inventory_item.indices) {
       if (item == Inventory_item(i)) {
         if (quantity > Inventory_quantity(i)) {
-          println("Not enough stock")
+          println("Quantity is not enough")
           found=true
         } else {
           Inventory_quantity(i) -= quantity
@@ -31,7 +31,7 @@ object P3{
       }
     }
     if (!found) {
-      println("Item is not found")
+      println("Item Does not exists ")
     }
   }
 
@@ -46,7 +46,7 @@ def main(args: Array[String]): Unit = {
   sellitem("Sugar", 2)
   println("After restocking and selling")
   displayinventory()
-  restock("millets", 5)
+  restock("dhall", 5)
   sellitem("Flour", 10)
 }
 }
